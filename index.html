@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Git Fix</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 40px;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* 🐛 BUG: The buttons are stacked vertically instead of side by side! */
+      .button-group {
+        display: block;
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .btn-secondary {
+        background-color: #f0f0f0;
+        color: #333;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 2.5em;
+      }
+
+      p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-size: 1.1em;
+      }
+
+      .emoji {
+        font-size: 3em;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      /* 🐛 BUG: The badge is hiding behind the card! */
+      .success-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #28a745;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        z-index: -1;
+      }
+
+      .task-box {
+        background-color: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      .task-box strong {
+        color: #856404;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="success-badge">NEW DEV 🚀</div>
+
+      <span class="emoji">🎉</span>
+      <h1>Welcome, Developer!</h1>
+      <p>
+        Congratulations on cloning your first repository! You're now part of the
+        amazing world of software development.
+      </p>
+      <p>
+        Something's not quite right with this page though... Can you spot the
+        CSS issues?
+      </p>
+
+      <div class="button-group">
+        <button class="btn btn-primary">Start Coding</button>
+        <button class="btn btn-secondary">Learn More</button>
+      </div>
+
+      <div class="task-box">
+        <strong>🔧 Your Tasks:</strong>
+        <br />1. Make the buttons appear side by side <br />2. Fix the "NEW DEV"
+        badge so it's visible
+      </div>
+    </div>
+  </body>
+</html>
